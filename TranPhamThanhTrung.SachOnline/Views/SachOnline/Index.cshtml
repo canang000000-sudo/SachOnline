@@ -4,6 +4,10 @@
     Layout = "~/Views/Shared/_LayoutUser.cshtml";
 }
 
+@section SachBanNhieu {
+    @Html.Action("SachbanNhieuPartial", "SachOnline")    
+}
+
 <h2 class="text-center">SÁCH MỚI</h2>
 <hr>
 <div class="row text-center">
