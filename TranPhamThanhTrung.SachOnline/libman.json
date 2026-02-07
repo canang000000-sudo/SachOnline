@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "defaultProvider": "unpkg",
+  "libraries": [
+    {
+      "library": "lucide@latest",
+      "destination": "wwwroot/lib/lucide/",
+      "files": [
+        "dist/umd/lucide.min.js"
+      ]
+    }
+  ]
+}

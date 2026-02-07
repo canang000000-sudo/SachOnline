@@ -1,114 +1,157 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutUser.cshtml";
 }
 
 @section SachBanNhieu {
-    @Html.Action("SachbanNhieuPartial", "SachOnline")    
+    @Html.Action("SachbanNhieuPartial", "SachOnline")
 }
 
-<h2 class="text-center">SÁCH MỚI</h2>
-<hr>
-<div class="row text-center">
-    <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
-        <div class="thumbnail">
-            <img src="~/Images/130499.jpg" alt="Thumbnail Image 1" class="img-responsive img-rounded imgbook ">
-            <div class="caption">
-                <h3>Sản phẩm</h3>
-                <p>Mô tả tóm tắt sản phẩm</p>
-                <p>
-                    <a href="#" class="btn btn-warning" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to Cart</a>
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
-        <div class="thumbnail">
-            <img src="~/Images/130318.jpg" alt="Thumbnail Image 1" class="img-responsive img-rounded imgbook">
-            <div class="caption">
-                <h3>Sản phẩm </h3>
-                <p>Mô tả tóm tắt sản phẩm</p>
-                <p>
-                    <a href="#" class="btn btn-danger" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to Cart</a>
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6 hidden-xs">
-        <div class="thumbnail">
-            <img src="~/Images/KT0001.jpg" alt="Thumbnail Image 1" class="img-responsive img-rounded imgbook">
-            <div class="caption">
-                <h3>Sản phẩm </h3>
-                <p>Mô tả tóm tắt sản phẩm</p>
-                <p>
-                    <a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to Cart</a>
-                </p>
+<h2 class="text-center mt-4 fw-bold">SÁCH MỚI</h2>
+<hr class="mb-5">
+
+<!-- g-4 provides consistent spacing between cards -->
+<div class="row g-4 text-center">
+
+    @* --- Item 1 --- *@
+    <div class="col-6 col-sm-4 col-lg-4">
+        <div class="card h-100 border-warning-subtle bg-white shadow-sm list-card-hover">
+            <img src="~/Images/130499.jpg" alt="Book 1" class="card-img-top img-fluid rounded p-2 imgbook">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title fw-bold">Sản phẩm</h5>
+                <p class="card-text text-muted flex-grow-1">Mô tả tóm tắt sản phẩm</p>
+                <div class="mt-3">
+                    <a href="#" class="btn btn-warning d-inline-flex align-items-center justify-content-center gap-2 w-100" role="button">
+                        <i data-lucide="shopping-cart" size="18"></i>
+                        <span>Add to Cart</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 
+    @* --- Item 2 --- *@
+    <div class="col-6 col-sm-4 col-lg-4">
+        <div class="card h-100 border-danger-subtle bg-white shadow-sm list-card-hover">
+            <img src="~/Images/130318.jpg" alt="Book 2" class="card-img-top img-fluid rounded p-2 imgbook">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title fw-bold">Sản phẩm</h5>
+                <p class="card-text text-muted flex-grow-1">Mô tả tóm tắt sản phẩm</p>
+                <div class="mt-3">
+                    <a href="#" class="btn btn-danger d-inline-flex align-items-center justify-content-center gap-2 w-100" role="button">
+                        <i data-lucide="shopping-cart" size="18"></i>
+                        <span>Add to Cart</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
-        <div class="thumbnail">
-            <img src="~/Images/KT0003.jpg" alt="Thumbnail Image 1" class="img-responsive img-rounded imgbook">
-            <div class="caption">
-                <h3>Sản phẩm </h3>
-                <p>Mô tả tóm tắt sản phẩm</p>
-                <p>
-                    <a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to Cart</a>
-                </p>
+    @* --- Item 3 (Hidden on mobile) --- *@
+    <div class="col-6 col-sm-4 col-lg-4 d-none d-sm-block">
+        <div class="card h-100 border-primary-subtle bg-white shadow-sm list-card-hover">
+            <img src="~/Images/KT0001.jpg" alt="Book 3" class="card-img-top img-fluid rounded p-2 imgbook">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title fw-bold">Sản phẩm</h5>
+                <p class="card-text text-muted flex-grow-1">Mô tả tóm tắt sản phẩm</p>
+                <div class="mt-3">
+                    <a href="#" class="btn btn-primary d-inline-flex align-items-center justify-content-center gap-2 w-100" role="button">
+                        <i data-lucide="shopping-cart" size="18"></i>
+                        <span>Add to Cart</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-    <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
-        <div class="thumbnail">
-            <img src="~/Images/KT0005.jpg" alt="Thumbnail Image 1" class="img-responsive img-rounded imgbook">
-            <div class="caption">
-                <h3>Sản phẩm </h3>
-                <p>Mô tả tóm tắt sản phẩm</p>
-                <p>
-                    <a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to Cart</a>
-                </p>
+
+    @* --- Item 4 --- *@
+    <div class="col-6 col-sm-4 col-lg-4">
+        <div class="card h-100 border-primary-subtle bg-white shadow-sm list-card-hover">
+            <img src="~/Images/KT0003.jpg" alt="Book 4" class="card-img-top img-fluid rounded p-2 imgbook">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title fw-bold">Sản phẩm</h5>
+                <p class="card-text text-muted flex-grow-1">Mô tả tóm tắt sản phẩm</p>
+                <div class="mt-3">
+                    <a href="#" class="btn btn-primary d-inline-flex align-items-center justify-content-center gap-2 w-100" role="button">
+                        <i data-lucide="shopping-cart" size="18"></i>
+                        <span>Add to Cart</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-    <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6 hidden-xs">
-        <div class="thumbnail">
-            <img src="~/Images/KT0007.jpg" alt="Thumbnail Image 1" class="img-responsive img-rounded imgbook">
-            <div class="caption">
-                <h3>Sản phẩm </h3>
-                <p>Mô tả tóm tắt sản phẩm</p>
-                <p>
-                    <a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to Cart</a>
-                </p>
+
+    @* --- Item 5 --- *@
+    <div class="col-6 col-sm-4 col-lg-4">
+        <div class="card h-100 border-primary-subtle bg-white shadow-sm list-card-hover">
+            <img src="~/Images/KT0005.jpg" alt="Book 5" class="card-img-top img-fluid rounded p-2 imgbook">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title fw-bold">Sản phẩm</h5>
+                <p class="card-text text-muted flex-grow-1">Mô tả tóm tắt sản phẩm</p>
+                <div class="mt-3">
+                    <a href="#" class="btn btn-primary d-inline-flex align-items-center justify-content-center gap-2 w-100" role="button">
+                        <i data-lucide="shopping-cart" size="18"></i>
+                        <span>Add to Cart</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
+
+    @* --- Item 6 (Hidden on mobile) --- *@
+    <div class="col-6 col-sm-4 col-lg-4 d-none d-sm-block">
+        <div class="card h-100 border-primary-subtle bg-white shadow-sm list-card-hover">
+            <img src="~/Images/KT0007.jpg" alt="Book 6" class="card-img-top img-fluid rounded p-2 imgbook">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title fw-bold">Sản phẩm</h5>
+                <p class="card-text text-muted flex-grow-1">Mô tả tóm tắt sản phẩm</p>
+                <div class="mt-3">
+                    <a href="#" class="btn btn-primary d-inline-flex align-items-center justify-content-center gap-2 w-100" role="button">
+                        <i data-lucide="shopping-cart" size="18"></i>
+                        <span>Add to Cart</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
-<nav class="text-center">
-    <!-- Add class .pagination-lg for larger blocks or .pagination-sm for smaller blocks-->
-    <ul class="pagination">
-        <li>
-            <a href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a>
+
+<!-- Centered Pagination -->
+<nav class="d-flex justify-content-center mt-5" aria-label="Page navigation">
+    <ul class="pagination shadow-sm">
+        <li class="page-item">
+            <a class="page-link text-dark" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
         </li>
-        <li class="active">
-            <a href="#">1</a>
-        </li>
-        <li>
-            <a href="#">2</a>
-        </li>
-        <li>
-            <a href="#">3</a>
-        </li>
-        <li>
-            <a href="#">4</a>
-        </li>
-        <li class="disabled">
-            <a href="#">5</a>
-        </li>
-        <li>
-            <a href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a>
+        <li class="page-item active"><a class="page-link bg-primary border-primary" href="#">1</a></li>
+        <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
+        <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
+        <li class="page-item"><a class="page-link text-dark" href="#">4</a></li>
+        <li class="page-item disabled"><a class="page-link" href="#">5</a></li>
+        <li class="page-item">
+            <a class="page-link text-dark" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
         </li>
     </ul>
 </nav>
+
+<style>
+    /* Keeps images responsive and consistent */
+    .imgbook {
+        max-height: 250px;
+        object-fit: contain;
+    }
+
+    /* Subtle lift effect on card hover */
+    .list-card-hover {
+        transition: transform 0.2s ease-in-out, border-color 0.2s;
+    }
+
+        .list-card-hover:hover {
+            transform: translateY(-5px);
+            border-color: #0d6efd !important; /* Bootstrap primary blue */
+        }
+</style>

@@ -1,23 +1,36 @@
 ﻿<!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>@ViewBag.Title</title>
-    @Styles.Render("~/Content/css")
+
+    <!-- Bootstrap 5.3 CSS -->
+    @Styles.Render("~/bundles/css")
+
     <style>
+        /* Updated for responsiveness: max-width instead of fixed width */
         .imgbook {
-            transition: all 1s ease-in;
-            width: 400px;
+            transition: all 0.4s ease-in-out; /* Smoother timing */
+            width: 100%;
+            max-width: 400px;
+            display: block;
+            margin: 0 auto;
         }
 
             .imgbook:hover {
-                transform: scale(0.9);
+                transform: scale(0.95); /* Slightly subtler scale */
                 cursor: pointer;
             }
 
         .imgsachbannhieu {
             width: 100px;
+        }
+
+        /* BS5 utility for spacing if needed */
+        hr {
+            margin: 2rem 0;
+            opacity: 0.15;
         }
     </style>
 </head>
@@ -25,41 +38,56 @@
 
     @Html.Action("NavPartial", "SachOnline")
 
-
-    <div class="container">
+    <!-- Hero/Slider Section -->
+    <div class="container my-4">
         <div class="row">
-
-
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="col-12">
                 @Html.Action("SliderPartial", "SachOnline")
             </div>
         </div>
         <hr>
     </div>
-    <!-- /.container-->
+
+    <!-- Main Content Body -->
     <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        <div class="row g-4">
+            <!-- Added gap (g-4) for better spacing -->
+            <!-- Sidebar: col-12 on mobile, col-md-3 on desktop -->
+            <aside class="col-12 col-md-3">
+                <div class="mb-4">
+                    @Html.Action("ChuDePartial", "SachOnline")
+                </div>
+                <div class="mb-4">
+                    @Html.Action("NhaXuatBanPartial", "SachOnline")
+                </div>
+            </aside>
 
-                @Html.Action("ChuDePartial", "SachOnline")
-                <br>
+            <!-- Content Area: col-12 on mobile, col-md-9 on desktop -->
+            <main class="col-12 col-md-9">
+                @RenderBody() <!-- Removed semicolon after RenderBody() -->
+            </main>
 
-                @Html.Action("NhaXuatBanPartial", "SachOnline")
-
-            </div>
-            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                @RenderBody();
-            </div>
         </div>
         <hr>
     </div>
-    <!-- /.container-->
-    <div class="container">
+
+    <!-- Section for Best Sellers -->
+    <div class="container mb-5">
         @RenderSection("SachBanNhieu", required: false)
     </div>
-    <!-- /.container-->
+
     @Html.Action("FooterPartial", "SachOnline")
 
-    @Scripts.Render("~/Scripts/js")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <!-- Lucide Icons -->
+    <script src="~/wwwroot/lib/lucide/dist/umd/lucide.min.js"></script>
+    <script>
+        // Ensure this runs after DOM is loaded
+        document.addEventListener("DOMContentLoaded", function () {
+            lucide.createIcons();
+        });
+    </script>
 </body>
 </html>

@@ -1,5 +1,32 @@
-﻿<footer class="container well" style="text-align: center;">
-    <p>©@DateTime.Now.Year - Nhà sách ABC. Allright Reserved</p>
-    <p>Website được phát triển để sử dụng làm bài tập thực hành môn Lập trình Web</p>
-    <p>Email: abc@gmail.com</p>
+﻿<footer class="container pt-4 bg-light mt-5 shadow-sm">
+    <div class="row">
+        <!-- Copyright & Source Code Links (Left Column) -->
+        <div class="col-md-6 text-center text-md-start">
+            <p>&copy;@DateTime.Now.Year - Nhà sách ABC. Allright Reserved</p>
+            <p>Website được phát triển để sử dụng làm bài tập thực hành môn Lập trình Web</p>
+        </div>
+
+        <!-- Tech Icons (Right Column) -->
+        <div class="col-md-6 text-center text-md-end">
+            <!-- Replace these i tags with your actual SVG icons (e.g., Font Awesome or Simple Icons) -->
+            <span class="d-inline-flex gap-3 align-items-center">
+                <i class="tech-icon" title="Bootstrap 5.3">
+                    <img src="@Url.Content("~/Images/Icon/bootstrap.svg")" width="32" height="32" />
+                </i>
+                <i class="tech-icon" title="ASP.NET Core">
+                    <img src="@Url.Content("~/Images/Icon/dotnet.svg")" width="32" height="32" />
+                </i>
+                <i class="tech-icon" title="HTML5">
+                    <img src="@Url.Content("~/Images/Icon/html5.svg")" width="32" height="32" />
+                </i>
+                <i class="tech-icon" title="CSS3">
+                    <img src="@Url.Content("~/Images/Icon/css.svg")" width="32" height="32" />
+                </i>
+                <i class="tech-icon" title="Lucide Icons">
+                    <img src="@Url.Content("~/Images/Icon/lucide.svg")" width="32" height="32" />
+                </i>
+            </span>
+            <p class="mb-0 mt-2">Email: abc@gmail.com</p>
+        </div>
+    </div>
 </footer>
