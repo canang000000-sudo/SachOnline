@@ -12,8 +12,6 @@
 
 <!-- g-4 provides consistent spacing between cards -->
 <div class="row g-4 text-center">
-
-    @* --- Item 1 --- *@
     <div class="col-6 col-sm-4 col-lg-4">
         <div class="card h-100 border-warning-subtle bg-white shadow-sm list-card-hover">
             <img src="~/Images/130499.jpg" alt="Book 1" class="card-img-top img-fluid rounded p-2 imgbook">
@@ -30,7 +28,6 @@
         </div>
     </div>
 
-    @* --- Item 2 --- *@
     <div class="col-6 col-sm-4 col-lg-4">
         <div class="card h-100 border-danger-subtle bg-white shadow-sm list-card-hover">
             <img src="~/Images/130318.jpg" alt="Book 2" class="card-img-top img-fluid rounded p-2 imgbook">
@@ -47,7 +44,6 @@
         </div>
     </div>
 
-    @* --- Item 3 (Hidden on mobile) --- *@
     <div class="col-6 col-sm-4 col-lg-4 d-none d-sm-block">
         <div class="card h-100 border-primary-subtle bg-white shadow-sm list-card-hover">
             <img src="~/Images/KT0001.jpg" alt="Book 3" class="card-img-top img-fluid rounded p-2 imgbook">
@@ -64,7 +60,6 @@
         </div>
     </div>
 
-    @* --- Item 4 --- *@
     <div class="col-6 col-sm-4 col-lg-4">
         <div class="card h-100 border-primary-subtle bg-white shadow-sm list-card-hover">
             <img src="~/Images/KT0003.jpg" alt="Book 4" class="card-img-top img-fluid rounded p-2 imgbook">
@@ -81,7 +76,6 @@
         </div>
     </div>
 
-    @* --- Item 5 --- *@
     <div class="col-6 col-sm-4 col-lg-4">
         <div class="card h-100 border-primary-subtle bg-white shadow-sm list-card-hover">
             <img src="~/Images/KT0005.jpg" alt="Book 5" class="card-img-top img-fluid rounded p-2 imgbook">
@@ -98,7 +92,6 @@
         </div>
     </div>
 
-    @* --- Item 6 (Hidden on mobile) --- *@
     <div class="col-6 col-sm-4 col-lg-4 d-none d-sm-block">
         <div class="card h-100 border-primary-subtle bg-white shadow-sm list-card-hover">
             <img src="~/Images/KT0007.jpg" alt="Book 6" class="card-img-top img-fluid rounded p-2 imgbook">
@@ -139,19 +132,17 @@
 </nav>
 
 <style>
-    /* Keeps images responsive and consistent */
     .imgbook {
         max-height: 250px;
         object-fit: contain;
     }
 
-    /* Subtle lift effect on card hover */
     .list-card-hover {
         transition: transform 0.2s ease-in-out, border-color 0.2s;
     }
 
         .list-card-hover:hover {
             transform: translateY(-5px);
-            border-color: #0d6efd !important; /* Bootstrap primary blue */
+            border-color: #0d6efd !important;
         }
 </style>
